@@ -1,13 +1,254 @@
+/* 追加 */
+* {
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* 以下全て追加 */
+/* Navbar.js  */
+header {
+  padding: 0 5%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+header > h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+header a {
+  text-decoration: none;
+  color: #4b4b4b;
+}
+
+header > nav {
+  margin: 0 0 0 auto;
+}
+
+header > nav > ul {
+  margin: 0;
+  display: flex;
+}
+
+header > nav > ul > li {
+  margin: 0 0 0 15px;
+  font-size: 14px;
+}
+img {
+  max-width: 100%;
+}
+/* Home.js  */
+.home {
+  position: relative;
+}
+
+.home > img {
+  width: 100%;
+  object-fit: cover;
+  min-height: 100vh;
+}
+
+.home_title {
+  position: absolute;
+  top: calc(35% - 0.5em);
+  width: 100%;
+  text-align: center;
+}
+
+.home_title h1 {
+  color: white;
+  font-size: 70px;
+  background: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  padding: 20px;
+  margin: 5px;
+  border-radius: 5px;
+}
+/* About.js */
+
+.about {
+  margin-top: 80px;
+}
+
+.about > h1 {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.profile {
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 0 10px;
+  color: white;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 0.500437675070028) 31%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.profile > h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.content {
+  display: flex;
+}
+
+.skill {
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 0 10px;
+  color: white;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 0.5032387955182073) 100%
+  );
+  width: 50%;
+}
+
+.skill > h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+div.skill > ul {
+  padding: 0;
+}
+
+div.skill > ul > li {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.experience {
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 0 10px;
+  color: white;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 0.48923319327731096) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  width: 50%;
+}
+
+.experience > h2 {
+  text-align: center;
+  font-size: 30px;
+}
+/* Post.js */
+.post {
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.post > h2 {
+  text-align: center;
+  font-size: 50px;
+}
+.post > .content {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 80%;
+}
+
+.post > .content > .contents {
+  border: 1px solid gray;
+  border-radius: 5px;
+  text-align: center;
+  margin: 3px 5px;
+  width: 300px;
+  height: 200px;
+}
+
+.post > h1 {
+  text-align: center;
+}
+/* DetailPost.js */
+.detail__post {
+  margin-top: 80px;
+}
+
+.detail__post > .content > h3 {
+  text-align: center;
+  font-size: 40px;
+  color: #5d5b5b;
+}
+
+.detail__post > .content > img {
+  display: block;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.detail__post > .content > .block__content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.detail__post > .content > .block__content > figure {
+  margin: auto;
+}
+
+.detail__post > .content > .block__content > figure > img {
+  width: 80%;
+}
+
+.detail__post > .content > p {
+  width: 80%;
+  margin: auto;
+}
+
+.detail__post > .content > .user_image {
+  width: 60%;
+  display: flex;
+  margin: 15px auto;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.detail__post > .content > .user_image img {
+  border-radius: 50%;
+  width: 50px;
 }
