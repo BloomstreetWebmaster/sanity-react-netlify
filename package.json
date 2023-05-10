@@ -2,6 +2,7 @@
   "name": "sanity-react-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
     "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/client": "^6.0.1",
