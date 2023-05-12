@@ -49,26 +49,36 @@ function SinglePost() {
   return (
     <div className="detail__post">
       <div className="content">
-        <img
-          className="main__image"
-          width="50%"
-          height="50%"
-          src={singlePost.mainImage.asset.url}
-          alt={singlePost.title}
-        />
-        <h3>{singlePost.title}</h3>
-        <BlockContent
-          blocks={singlePost.body}
-          projectId="69c5evgs"
-          dataset="production"
-          serializers={serializers}
-        />
-        <div className="user_image">
+        {singlePost.mainImage && (
           <img
-            width="10%"
-            height="10%"
-            src={urlFor(singlePost.authorImage).width(100).height(100).url()}
-            alt={singlePost.name}
+            className="main__image"
+            width="50%"
+            height="50%"
+            src={singlePost.mainImage.asset.url}
+            alt={singlePost.title}
+          />
+        )}
+        <div>
+          <h3>{singlePost.title}</h3>
+          <div className="user_image">
+            {singlePost.authorImage && (
+              <img
+                width="10%"
+                height="10%"
+                src={urlFor(singlePost.authorImage)
+                  .width(100)
+                  .height(100)
+                  .url()}
+                alt={singlePost.name}
+              />
+            )}
+            {singlePost.name}
+          </div>
+          <BlockContent
+            blocks={singlePost.body}
+            projectId="69c5evgs"
+            dataset="production"
+            serializers={serializers}
           />
         </div>
       </div>

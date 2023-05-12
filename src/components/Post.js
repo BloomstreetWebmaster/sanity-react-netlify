@@ -31,12 +31,14 @@ function Post() {
           postData.map((post, index) => (
             <div className="contents" key={index}>
               <Link to={"/post/" + post.slug.current} key={post.slug.current}>
-                <img
-                  width="60%"
-                  height="60%"
-                  src={post.mainImage.asset.url}
-                  alt={post.mainImage.alt}
-                />
+                {post.mainImage && (
+                  <img
+                    width="60%"
+                    height="60%"
+                    src={post.mainImage.asset.url}
+                    alt={post.mainImage.alt}
+                  />
+                )}
                 <h3>{post.title}</h3>
               </Link>
             </div>
