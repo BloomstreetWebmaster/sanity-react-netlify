@@ -6,7 +6,7 @@ function Navbar() {
     <header>
       <h1>
         <NavLink to="/" exact>
-          Portfolio
+          SEO
         </NavLink>
       </h1>
       <nav>

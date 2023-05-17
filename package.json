@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "./",
   "dependencies": {
+    "@metamanager/react-seo": "^0.5.3",
     "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/client": "^6.0.1",
     "@sanity/image-url": "^1.0.2",

@@ -52,8 +52,6 @@ function SinglePost() {
         {singlePost.mainImage && (
           <img
             className="main__image"
-            width="50%"
-            height="50%"
             src={singlePost.mainImage.asset.url}
             alt={singlePost.title}
           />
@@ -63,8 +61,8 @@ function SinglePost() {
           <div className="user_image">
             {singlePost.authorImage && (
               <img
-                width="10%"
-                height="10%"
+                width="100%"
+                height="100%"
                 src={urlFor(singlePost.authorImage)
                   .width(100)
                   .height(100)
@@ -72,7 +70,7 @@ function SinglePost() {
                 alt={singlePost.name}
               />
             )}
-            {singlePost.name}
+            <span>{singlePost.name}</span>
           </div>
           <BlockContent
             blocks={singlePost.body}
